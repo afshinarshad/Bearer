@@ -1,0 +1,55 @@
+.transport-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.transport-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  margin: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.transport-option.hover {
+  background-color: gray;
+}
+.transport-option.selected {
+  background-color: rgb(0, 123, 255);
+}
+
+.transport-option img {
+  width: 80px;
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+.transport-option p {
+  margin: 0;
+}
+
+button[type="submit"] {
+  display: block;
+  margin: 0 auto;
+}
+button {
+  border: 1px solid gray;
+  background-color: transparent;
+  color: gray;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  border-color: rgb(0, 166, 255);
+  color: rgb(0, 166, 255);
+}
+
+button:active {
+  border-color: rgb(0, 205, 24);
+  color: rgb(0, 205, 24);
+}

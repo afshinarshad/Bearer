@@ -1,0 +1,82 @@
+.destination-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+        }
+        
+        .destination-container > article {
+          border: none;
+        }
+        
+        .destination-container label {
+          font-weight: bold;
+        }
+        
+        .destination-container input {
+         padding:1rem;
+         border: none;
+        
+          width: 100%;
+          margin-bottom: 10px;
+          background-color: rgb(229, 229, 229);
+        }
+        
+        .destination-container .details input {
+          margin:0;
+        }
+        
+        .destination-container .phone-name {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 10px;
+        }
+        
+        .destination-container .delivery input[type="radio"] {
+          transform: scale(0.8);
+          margin-right: 5px;
+        }
+        
+        .destination-container .delivery label {
+          display: inline-flex;
+          align-items: center;
+        }
+        
+        .destination-container .delivery label + label {
+          margin-left: 10px;
+        }
+        
+        .destination-container .delivery p {
+          font-size: 0.7rem;
+         display: inline;
+         flex-direction: row;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+     
+      
+        .destination-container button {
+          border: 1px solid gray;
+          background-color: transparent;
+          color: gray;
+          padding: 5px 10px;
+          cursor: pointer;
+          transition: border-color 0.3s, color 0.3s;
+        }
+        
+        .destination-container button:hover {
+          border-color: rgb(0, 166, 255);
+          color: rgb(0, 166, 255);
+        }
+        
+        .destination-container button:active {
+          border-color: rgb(0, 205, 24);
+          color: rgb(0, 205, 24);
+        }
+        
+
+
+
+
+

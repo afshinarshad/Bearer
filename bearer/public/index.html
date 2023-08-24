@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Bearer</title>
+    <!-- <scriptsrc= "https://maps.googleapis.com/maps/api/js?key=AIzaSyAIFDAL0i0bMpGe8DIaP8xCBtoqNMyg718" ></script> -->
+  </head>
+  <body>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIFDAL0i0bMpGe8DIaP8xCBtoqNMyg718&libraries=places&callback=initAutocomplete"
+    async defer
+  ></script>
+    <script>
+      let autocomplete;
+      function initAutocomplete() {
+        // initialize a new place autocomplete service
+        autocomplete = new window.google.maps.places.Autocomplete(
+          document.getElementById("autocomplete"),
+          {
+            types: ["stablishment"],
+            componentRestrictions: { country: ["AU"] },
+            fields: ["place_id", "geometry", "name"],
+          }
+        );
+        //TODO: add an input to your app with id of 'autocomplete' to attach it
+
+        // when the user selects on of the predictons
+        autocomplete.addListener("place_changed", onPlaceChanged);
+        function onPlaceChanged() {
+          let place = autocomplete.getPlace();
+          if (place.geometry) {
+            //user did not select a predicton so reeset the input field
+            document.getElementById("autocomplete").placeholder =
+              "Enter a place";
+          } else {
+            //display deatails about the valid place
+            document.getElementById("details").innerHTML = place.name;
+          }
+        }
+      }
+    </script>
+    <div id='googlemaps-attribution-container'></div> 
+    <div id="root"></div>
+  </body>
+</html>

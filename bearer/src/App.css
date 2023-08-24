@@ -1,0 +1,13 @@
+.app-container {
+  display: flex;
+  height: 100vh; /* Ensure the container takes up the full height of the viewport */
+}
+
+.map {
+  flex: 1; /* Adjust the width of the map component as needed */
+}
+
+.tabs {
+  flex: 0 0 34%; /* Adjust the width of the tabs component as needed */
+  overflow-y: 100%; /* Add a scrollbar if the content overflows */
+}
